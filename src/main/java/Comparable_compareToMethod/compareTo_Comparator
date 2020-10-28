@@ -1,0 +1,30 @@
+
+
+compareTo() -- one of the methods of the Comparable Interface
+
+Comparator() -- is an Interface that can be added under the main public execution class;
+		used: 1. When the Comparable Interface is not implemented to a class created by a third party. 
+			  2. When a different column, than what is already defined under compareTo(), needs to be sorted  
+		
+		1. Comparator is an interface that is defined using Anonymous class
+			------------------------------------------------
+			Comparator<clsName> com = new Comparator<clsName>(){
+									public void Comparator(clsName L1, clsName L2){
+									if (L1.getVar1() > L2.getVar1())
+										return 1;
+									else 
+										return -1;
+									}
+								};
+				Collections.sort(ar, com);				
+								
+								
+		2. compareTo() method is implemented inside the class.
+			------------------------------------------------
+			public int compareTo(clsName obj){
+				if(this.getVar2() > obj.getVar2)
+					return 1;
+				else
+					return 2;
+			}
+			

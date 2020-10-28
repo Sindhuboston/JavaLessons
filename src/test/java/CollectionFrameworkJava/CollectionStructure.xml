@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+						
+	Note: package= java.util
+=======================================================================================
+=======================================================================================
+	
+					iterable		
+					============	
+					
+					collection		
+					============	
+	
+	List			Queue				Set
+	============	============		============
+	ArrayList		PriorityQueue		HashSet
+										LinkedHashSet
+	Vector				
+		Stack							SortedSet
+										============
+										TreeSet
+	LinkedArray		DeQue		
+					============
+					ArrayDeque		
+					
+
+
+Extends								Implements		
+collection extends iterable			ArrayList implements List		
+List extends collection				Vector implements List		
+Queue extends collection			LinkedArray implements List		
+Set extends collection				PriorityQueue implements List		
+Stack extends Vector				ArrayDeque implements Deque		
+Deque extends Queue					TreeSet implements SortedSet		
+SortedSet extends Set				HashSet implements Set		
+									LinkedHashSet implements Set		
+	

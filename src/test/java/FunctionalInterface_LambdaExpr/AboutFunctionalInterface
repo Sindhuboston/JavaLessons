@@ -1,0 +1,53 @@
+
+
+------------ notes on FunctionalInterface Annotation -----------------------------
+
+
+1. @FunctionalInterface is an Annotation of java
+2. it is used --->  to mark an interface that is used in lamba expression <---- 
+			so that this Interface has only one abstract method inside it.  
+			Any Interface is considered a FunctionalInterface if it only has one abstract method by default.  Annotation just enforced it. 
+	
+		*** Interface can contain a multiple list of methods 
+		however, it must have only ONE Abstract method. 
+		
+		@FunctionalInterface annotation is written above, at the beging so that nobody else from the team 
+		even accidentally adds another abstract method inside this interface that is used to create
+		lambda expression.
+		
+	
+	Explained:
+		Lambda expressions depends on Interface completely.  
+		The abstract method inside the Interface, that is used by the lambda exprs,
+		has the definition of return type, and other details of this abstract method.
+		
+		*** Interface can contain a multiple list of methods 
+		however, it must have only ONE Abstract method that is not defined. 
+		
+		so that nobody in the team adds any more of abstract method t this interface,
+		this Interface is marked with the annotation, @FunctionalInterface.
+	
+		Note: it is not mandatory to write @FunctionalInterface annotation above an Interface
+			but it is recommended to use this annotation 
+			so that other would not adding another abstract method to this interface.
+			
+
+Abstract Methods and Classes
+----------------------------		
+		CLASS --->  An abstract class is a class that is declared abstract—it may or may not include abstract methods. 
+					Abstract classes cannot be instantiated, but they can be subclassed.
+		
+		METHOD --->  An abstract method is a method that is declared without an implementation (without braces, and followed by a semicolon), like this:
+					Example:  abstract void moveTo(double deltaX, double deltaY);
+		
+		If a class includes abstract methods, then the class itself must be declared abstract, as in:
+					Example:	public abstract class GraphicObject {
+								   // declare fields
+								   // declare nonabstract methods
+								   abstract void draw();
+								}
+		When an abstract class is subclassed, the subclass usually provides implementations for all of the abstract methods in its parent class. 
+		However, if it does not, then the subclass must also be declared abstract.
+		
+		**** Note: Methods in an interface (see the Interfaces section) that are not declared as default or static are implicitly abstract, 
+		so the abstract modifier is not used with interface methods. (It can be used, but it is unnecessary.)			
