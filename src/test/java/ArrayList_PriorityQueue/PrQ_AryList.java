@@ -1,4 +1,4 @@
-package PriorityQueue_ArrayList;
+package ArrayList_PriorityQueue;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -60,7 +60,7 @@ public class PrQ_AryList implements Comparable<PrQ_AryList> {
 	Iterator <PrQ_AryList> it = pq.iterator();
 	
 	while(it.hasNext()) {
-		System.out.println("Sorted by lastname --- compareTo() + no Collections() --- :"+ pq.poll().toString());
+		System.out.println("Sorted by lastname --- compareTo() method by Comparable Interface  + no Collections() --- :"+ pq.poll().toString());
 	}
 	System.out.println("*------------------------------------ArrayList starts: ----------------------------------*");
 	ArrayList <PrQ_AryList> ar = new ArrayList<PrQ_AryList>();
@@ -71,16 +71,16 @@ public class PrQ_AryList implements Comparable<PrQ_AryList> {
 		ar.add(cls1);
 		
 	Comparator<PrQ_AryList> com = new Comparator<PrQ_AryList>() {
-																@Override
-																public int compare(PrQ_AryList o1, PrQ_AryList o2) {
-																	if(o1.getId() > o2.getId())
-																		return 1;
-																	else 
-																		return -1;}};
+												@Override
+												public int compare(PrQ_AryList o1, PrQ_AryList o2) {
+													if(o1.getId() > o2.getId())
+														return 1;
+													else 
+														return -1;}};
 	Collections.sort(ar, com);
 	
 	for(PrQ_AryList str: ar) {
-		System.out.println("Sorted by ID --- Comparator() + Collections --- :"+str);
+		System.out.println("Sorted by ID --- Comparator() interface as Anonymous class + Collections() --- :"+str);
 	}
 	
 	

@@ -1,0 +1,10 @@
+
+
+ArrayList -- slow in --insertion/deletion-- and re-adjusting the other elements in the list.
+			- fast in --fetching-- data
+			
+LinkedList -- fast in --insertion/deletion-- and re-adjusting the other elements in the list.
+			- slow in --fetching-- data
+			
+			Note:- both of the above classes implements List interface methods.
+			
